@@ -7,7 +7,10 @@ const App = () => {
 
   const changeName = () => {
     // Value will be change when user click on the button
-    setMyName("Chintan Patel");
+    // setMyName("Chintan Patel");
+
+    // Toggle implement on button
+    myName === 'hello' ? setMyName('Chintan Patel') : setMyName('hello');
   }
 
   return (
