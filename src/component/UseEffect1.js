@@ -2,15 +2,23 @@ import React, { useState, useEffect } from 'react'
 
 const UseEffect1 = () => {
 
+    // Make sure any hooks can not be use inside a conditional statement.
+    // But inside a hook you can use conditional statement.
+
     const [count, setCount] = useState(0);
 
     // useEffect is run after the all components run
     // It runs only one time
     // It runs on every time when reload the page
     useEffect(() => {
-        console.log("Use effect");
-        // Change the title based on the count value
-        document.title = `Unread message (${count})`
+        if (count > 0) {
+            // Change the title based on the count value
+            document.title = `Unread message (${count})`
+        }
+        else {
+            // If you didn't click on button then you can't see count
+            document.title = `Unread message`
+        }
     });
 
     console.log("Outside");
