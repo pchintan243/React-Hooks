@@ -1,9 +1,10 @@
 import React, { useState } from 'react'
 // import RulesHook from './component/RulesHook';
-import UseStateArray from './component/UseStateArray';
+// import UseStateArray from './component/UseStateArray';
 // import UseStateObject from './component/UseStateObject';
 import './App.css';
-import ShortCircuitEval from './component/ShortCircuitEval';
+// import ShortCircuitEval from './component/ShortCircuitEval';
+import BasicForm from './component/BasicForm';
 
 const App = () => {
 
@@ -18,13 +19,14 @@ const App = () => {
   }
 
   return (
-    <div className="container text-center">
+    <div className="container">
       {/* <h1>{myName}</h1> */}
       {/* <button className="btn btn-danger" onClick={changeName}>Click It..!!</button> */}
       {/* <RulesHook /> */}
       {/* <UseStateArray /> */}
       {/* <UseStateObject /> */}
-      <ShortCircuitEval />
+      {/* <ShortCircuitEval /> */}
+      <BasicForm />
     </div>
   )
 }
