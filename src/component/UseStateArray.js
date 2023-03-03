@@ -16,11 +16,24 @@ const UseStateArray = () => {
         setmyArray([]);
     }
 
+    const removeElement = (id) => {
+        const myNewArray = myArray.filter((curElm) => {
+            return curElm.id !== id;
+        })
+
+        setmyArray(myNewArray);
+    }
+
     return (
         <>
             {
                 myBioData.map((curElm) => {
-                    return <h1 key={curElm.id}>Name: {curElm.name} & Age: {curElm.age}</h1>
+                    return (
+                        <h1 key={curElm.id}>Name: {curElm.name} & Age: {curElm.age}
+                            {/* For getting the id of an element we can call a function in button & after that we can define the function at top */}
+                            <button className='btn btn-danger' onClick={() => removeElement(curElm.id)}>Remove</button>
+                        </h1>
+                    )
                 })
             }
             <button className='btn btn-danger' onClick={clearValue}>Clear</button>

@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
-import RulesHook from './component/RulesHook';
+// import RulesHook from './component/RulesHook';
 import UseStateArray from './component/UseStateArray';
-import UseStateObject from './component/UseStateObject';
+// import UseStateObject from './component/UseStateObject';
 import './App.css';
 
 const App = () => {
@@ -21,8 +21,8 @@ const App = () => {
       {/* <h1>{myName}</h1> */}
       {/* <button className="btn btn-danger" onClick={changeName}>Click It..!!</button> */}
       {/* <RulesHook /> */}
-      {/* <UseStateArray /> */}
-      <UseStateObject />
+      <UseStateArray />
+      {/* <UseStateObject /> */}
     </div>
   )
 }
