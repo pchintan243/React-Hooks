@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import UseStateArray from './component/UseStateArray';
 // import UseStateObject from './component/UseStateObject';
 import './App.css';
+import ShortCircuitEval from './component/ShortCircuitEval';
 
 const App = () => {
 
@@ -21,8 +22,9 @@ const App = () => {
       {/* <h1>{myName}</h1> */}
       {/* <button className="btn btn-danger" onClick={changeName}>Click It..!!</button> */}
       {/* <RulesHook /> */}
-      <UseStateArray />
+      {/* <UseStateArray /> */}
       {/* <UseStateObject /> */}
+      <ShortCircuitEval />
     </div>
   )
 }
