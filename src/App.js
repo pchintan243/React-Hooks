@@ -5,6 +5,7 @@ import React, { useState } from 'react'
 import './App.css';
 // import ShortCircuitEval from './component/ShortCircuitEval';
 import BasicForm from './component/BasicForm';
+import UseEffect1 from './component/UseEffect1';
 
 const App = () => {
 
@@ -26,7 +27,8 @@ const App = () => {
       {/* <UseStateArray /> */}
       {/* <UseStateObject /> */}
       {/* <ShortCircuitEval /> */}
-      <BasicForm />
+      {/* <BasicForm /> */}
+      <UseEffect1 />
     </div>
   )
 }
