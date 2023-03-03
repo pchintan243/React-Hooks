@@ -10,6 +10,7 @@ const UseEffect1 = () => {
     // useEffect is run after the all components run
     // It runs only one time
     // It runs on every time when reload the page
+    // You can use multiple useEffect in your code
     useEffect(() => {
         if (count > 0) {
             // Change the title based on the count value
@@ -19,7 +20,9 @@ const UseEffect1 = () => {
             // If you didn't click on button then you can't see count
             document.title = `Unread message`
         }
-    });
+        // If you pass the empty dependency array then useEffect runs only once when reload the page
+        // But if you pass the dependency array with variable then useEffect runs everytime when variable value will be change
+    }, [count]);
 
     console.log("Outside");
 
