@@ -13,10 +13,20 @@ const BasicForm = () => {
         // For remove the page reload when user click on submit button
         e.preventDefault();
 
-        const newEntry = { email: email, password: password };
+        if (email && password) {
+            // id is use for unique key warning remove
+            const newEntry = { id: new Date().getTime().toString(), email: email, password: password };
 
-        setAllEntry([...allEntry, newEntry]);
-        console.log(allEntry);
+            setAllEntry([...allEntry, newEntry]);
+            console.log(allEntry);
+
+            // After click on submit btn it input tag will be empty
+            setEmail("");
+            setPassword("");
+        }
+        else {
+            alert("Please filled the data");
+        }
     }
     return (
         <>
@@ -42,9 +52,10 @@ const BasicForm = () => {
                 {
                     // To show the value
                     allEntry.map((curElm) => {
-                        return <div>
-                            <p>Email: {curElm.email}</p>
-                            <p>Password: {curElm.password}</p>
+                        const { id, email, password } = curElm;
+                        return <div key={id}>
+                            <p>Email: {email}</p>
+                            <p>Password: {password}</p>
                         </div>
                     })
                 }
