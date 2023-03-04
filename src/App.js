@@ -7,6 +7,7 @@ import './App.css';
 import BasicForm from './component/BasicForm';
 import UseEffect1 from './component/useEffect/UseEffect1';
 import UseEffect2 from './component/useEffect/UseEffect2';
+import UseEffectAPI from './component/useEffect/UseEffectAPI';
 
 const App = () => {
 
@@ -30,7 +31,8 @@ const App = () => {
       {/* <ShortCircuitEval /> */}
       {/* <BasicForm /> */}
       {/* <UseEffect1 /> */}
-      <UseEffect2 />
+      {/* <UseEffect2 /> */}
+      <UseEffectAPI />
     </div>
   )
 }
