@@ -5,7 +5,8 @@ import React, { useState } from 'react'
 import './App.css';
 // import ShortCircuitEval from './component/ShortCircuitEval';
 import BasicForm from './component/BasicForm';
-import UseEffect1 from './component/UseEffect1';
+import UseEffect1 from './component/useEffect/UseEffect1';
+import UseEffect2 from './component/useEffect/UseEffect2';
 
 const App = () => {
 
@@ -28,7 +29,8 @@ const App = () => {
       {/* <UseStateObject /> */}
       {/* <ShortCircuitEval /> */}
       {/* <BasicForm /> */}
-      <UseEffect1 />
+      {/* <UseEffect1 /> */}
+      <UseEffect2 />
     </div>
   )
 }
