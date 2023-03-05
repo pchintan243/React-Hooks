@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react';
+import { FcApproval } from "react-icons/fc";
 import Loading from './github/Loading';
 
 const UseEffectApi = () => {
@@ -43,7 +44,7 @@ const UseEffectApi = () => {
                                     <div className="card p-2">
                                         <div className="d-flex align-items-center">
                                             <div className="ml-3 w-100">
-                                                <h4 className="mb-0 mt-0 textLeft">{curElm.name}</h4>
+                                                <h4 className="mb-0 mt-0 textLeft">{curElm.name}<FcApproval /></h4>
                                                 <span className="textLeft">{curElm.email}</span>
                                                 <div className="p-2 mt-2 d-flex justify-content-between rounded stats">
                                                     <div className="d-flex flex-column">
