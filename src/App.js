@@ -8,6 +8,7 @@ import BasicForm from './component/BasicForm';
 import UseEffect1 from './component/useEffect/UseEffect1';
 import UseEffect2 from './component/useEffect/UseEffect2';
 import UseEffectAPI from './component/useEffect/UseEffectAPI';
+import UseReducer from './component/UseReducer';
 
 const App = () => {
 
@@ -32,7 +33,8 @@ const App = () => {
       {/* <BasicForm /> */}
       {/* <UseEffect1 /> */}
       {/* <UseEffect2 /> */}
-      <UseEffectAPI />
+      {/* <UseEffectAPI /> */}
+      <UseReducer />
     </div>
   )
 }
