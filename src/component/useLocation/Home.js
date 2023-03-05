@@ -5,9 +5,9 @@ const Home = () => {
     const location = useLocation();
     return (
         <>
-            <h1>{location.pathname.replace("/", "")}</h1>
+            <h1>{location.pathname.replace("/", "")}Home</h1>
             {
-                location.pathname === "home" ?
+                location.pathname === "" ?
                     <p>Hello you are in about page</p> :
                     <p>Hello you are in home page</p>
             }
