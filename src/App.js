@@ -1,10 +1,11 @@
 import React, { useState } from 'react'
-// import RulesHook from './component/RulesHook';
-// import UseStateArray from './component/UseStateArray';
-// import UseStateObject from './component/UseStateObject';
+import RulesHook from './component/RulesHook';
+import UseStateArray from './component/UseStateArray';
+import UseStateObject from './component/UseStateObject';
 import './App.css';
-// import ShortCircuitEval from './component/ShortCircuitEval';
+import ShortCircuitEval from './component/ShortCircuitEval';
 import BasicForm from './component/BasicForm';
+import Component1 from './component/useContext/Component1';
 import UseEffect1 from './component/useEffect/UseEffect1';
 import UseEffect2 from './component/useEffect/UseEffect2';
 import UseEffectAPI from './component/useEffect/UseEffectAPI';
@@ -34,7 +35,8 @@ const App = () => {
       {/* <UseEffect1 /> */}
       {/* <UseEffect2 /> */}
       {/* <UseEffectAPI /> */}
-      <UseReducer />
+      {/* <UseReducer /> */}
+      <Component1 />
     </div>
   )
 }
