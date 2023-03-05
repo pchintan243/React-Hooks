@@ -10,6 +10,10 @@ import UseEffect1 from './component/useEffect/UseEffect1';
 import UseEffect2 from './component/useEffect/UseEffect2';
 import UseEffectAPI from './component/useEffect/UseEffectAPI';
 import UseReducer from './component/UseReducer';
+import Navbar from './component/Navbar';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from './component/useLocation/Home';
+import About from './component/useLocation/About';
 
 const App = () => {
 
@@ -24,20 +28,31 @@ const App = () => {
   }
 
   return (
-    <div className="container">
-      {/* <h1>{myName}</h1> */}
-      {/* <button className="btn btn-danger" onClick={changeName}>Click It..!!</button> */}
-      {/* <RulesHook /> */}
-      {/* <UseStateArray /> */}
-      {/* <UseStateObject /> */}
-      {/* <ShortCircuitEval /> */}
-      {/* <BasicForm /> */}
-      {/* <UseEffect1 /> */}
-      {/* <UseEffect2 /> */}
-      {/* <UseEffectAPI /> */}
-      {/* <UseReducer /> */}
-      <Component1 />
-    </div>
+    <>
+      <Router>
+        <Navbar />
+        <Routes>
+      
+          <Route exact path="/home" element={<Home />}></Route>
+          <Route exact path="/about" element={<About />}></Route>
+
+        </Routes>
+      </Router>
+      <div className="container">
+        {/* <h1>{myName}</h1> */}
+        {/* <button className="btn btn-danger" onClick={changeName}>Click It..!!</button> */}
+        {/* <RulesHook /> */}
+        {/* <UseStateArray /> */}
+        {/* <UseStateObject /> */}
+        {/* <ShortCircuitEval /> */}
+        {/* <BasicForm /> */}
+        {/* <UseEffect1 /> */}
+        {/* <UseEffect2 /> */}
+        {/* <UseEffectAPI /> */}
+        {/* <UseReducer /> */}
+        {/* <Component1 /> */}
+      </div>
+    </>
   )
 }
 
