@@ -14,6 +14,7 @@ import Navbar from './component/Navbar';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from './component/useLocation/Home';
 import About from './component/useLocation/About';
+import Login from './component/Login';
 
 const App = () => {
 
@@ -32,9 +33,10 @@ const App = () => {
       <Router>
         <Navbar />
         <Routes>
-      
+
           <Route exact path="/" element={<Home />}></Route>
           <Route exact path="/about" element={<About />}></Route>
+          <Route exact path="/login" element={<Login />}></Route>
 
         </Routes>
       </Router>
