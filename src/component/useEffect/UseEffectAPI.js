@@ -1,23 +1,39 @@
 import React, { useState, useEffect } from 'react'
+import Loading from './github/Loading';
 
 const UseEffectApi = () => {
 
-    const [users, setUsers] = useState([])
+    const [users, setUsers] = useState([]);
+    const [loading, setLoading] = useState(true);
 
     const getUsers = async () => {
-        // Fetch API
-        const response = await fetch("https://jsonplaceholder.typicode.com/users");
-        setUsers(await response.json());
+        try {
+            // Fetch API
+            const response = await fetch("https://jsonplaceholder.typicode.com/users");
+            // If data is loaded succesfully then we set the value as a 
+            setLoading(false);
+            setUsers(await response.json());
+
+        } catch (error) {
+            // If error is occured then setLoading will be false because we want to see the error
+            setLoading(false);
+            console.log("Error" + error);
+        }
     }
 
-    //Dependency must when use map function
+    // Dependency must when use map function
     useEffect(() => {
         getUsers();
-    }, [])
+    }, []);
+
+    // If data is loading then we show the loading file
+    if (loading) {
+        return <Loading />
+    }
 
     return (
         <>
-            <h2>List of GitHub Users</h2>
+            <h1 className='text-center mt-3'>List of GitHub Users</h1>
             <div className="container-fluid mt-5">
                 <div className="row text-center">
                     {
@@ -25,10 +41,7 @@ const UseEffectApi = () => {
                             return (
                                 <div className="col-10 col-md-4 mt-5" key={curElm.id}>
                                     <div className="card p-2">
-                                        <div className="d-flex align-items center">
-                                            <div className="image">
-                                                <img src="" alt="" />
-                                            </div>
+                                        <div className="d-flex align-items-center">
                                             <div className="ml-3 w-100">
                                                 <h4 className="mb-0 mt-0 textLeft">{curElm.name}</h4>
                                                 <span className="textLeft">{curElm.email}</span>
